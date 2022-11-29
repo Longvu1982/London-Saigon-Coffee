@@ -191,12 +191,14 @@ body {
   margin-bottom: 60px;
 }
 .main .service {
-  scroll-margin-top: 190px;
+  scroll-margin-top: 50px;
   background-color: #fff;
-  padding-top: 60px;
+  padding: 60px 0;
   color: #000;
 }
 .main .service .service-detail {
+  padding-left: 40px;
+  padding-right: 40px;
   display: flex;
   gap: 60px;
   justify-content: center;
@@ -251,6 +253,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 100px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .main .service .service-more img {
   max-width: 500px;
@@ -266,4 +270,61 @@ body {
 .main .service .service-more .service-more-section p {
   line-height: 30px;
   font-weight: 300;
+}
+.main .contact {
+  background-color: #fff;
+  padding: 60px;
+  text-align: center;
+}
+.main .contact h1 {
+  color: #000;
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+.main .contact form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.main .contact form .input-container {
+  text-align: left;
+}
+.main .contact form .input-container label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.main .contact form input {
+  width: 100%;
+  padding: 15px 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+  background-color: #f7f7f7;
+}
+.main .contact form .name-email {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.main .contact form .name-email > * {
+  flex: 1;
+}
+.main .contact form textarea {
+  width: 100%;
+  padding: 15px 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+  background-color: #f7f7f7;
+}
+.main .contact form button {
+  border: none;
+  outline: none;
+  padding: 20px 80px;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.main .contact form button:hover {
+  opacity: 0.8;
 }/*# sourceMappingURL=style.css.map */
