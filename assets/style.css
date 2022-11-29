@@ -1,0 +1,269 @@
+*,
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: var(--text-color);
+}
+
+:root {
+  --primary-color: #cd3b27;
+  --primary-color-light: #d44b39;
+  --text-color: #69737a;
+}
+
+.par-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 20px;
+}
+
+.background,
+.foreground {
+  width: 100%;
+  position: absolute;
+}
+
+.background {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform: translateZ(-50px) scale(3.6);
+  margin-top: 300px;
+  overflow-x: hidden;
+}
+.background img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  filter: brightness(0.9);
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+.header .top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px 20px;
+  transition: 0.2s ease all;
+}
+.header .top-section .header-logo {
+  height: 70px;
+}
+.header .top-section .header-logo img {
+  height: 100%;
+}
+.header .top-section .header-btns {
+  display: flex;
+  gap: 20px;
+  font-weight: 600;
+}
+.header .top-section .header-btns .phone-btn {
+  color: currentColor;
+}
+.header .top-section .header-btns > * {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s all ease;
+}
+.header .top-section .header-btns > *:hover {
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+.header .top-section.hide {
+  margin-top: -130px;
+}
+.header .header-nav {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.header .header-nav ul {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.header .header-nav ul li {
+  cursor: pointer;
+  position: relative;
+}
+.header .header-nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2.5px;
+  background-color: var(--primary-color);
+  left: 0;
+  bottom: -10px;
+  transition: all 0.2s ease;
+}
+.header .header-nav ul li:hover {
+  color: var(--primary-color-light);
+}
+.header .header-nav ul li:hover::after {
+  width: 100%;
+}
+.header .header-nav ul li.active {
+  color: var(--primary-color-light);
+}
+.header .header-nav ul li.active::after {
+  width: 100%;
+}
+
+.main {
+  margin-top: 230px;
+}
+.main .intro {
+  scroll-margin-top: 400px;
+  height: calc(100vh - 194px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .intro-info {
+  background-color: var(--primary-color);
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 70px 160px 80px;
+  margin-bottom: 200px;
+  color: #fff;
+}
+.main .intro-info h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.main .intro-info p {
+  font-size: 24px;
+  color: #000;
+  font-weight: 300;
+}
+.main .main-dsc {
+  scroll-margin-top: 250px;
+  width: 100%;
+  height: 450px;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.main .main-dsc h1 {
+  font-size: 50px;
+  color: var(--primary-color);
+}
+.main .main-dsc p {
+  font-weight: 300;
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 850px;
+  line-height: 30px;
+}
+.main .main-dsc p + p {
+  margin-bottom: 60px;
+}
+.main .service {
+  scroll-margin-top: 190px;
+  background-color: #fff;
+  padding-top: 60px;
+  color: #000;
+}
+.main .service .service-detail {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.main .service .service-detail .service-detail-section {
+  text-align: center;
+}
+.main .service .service-detail .service-detail-section h1.service-detail-title {
+  font-size: 34px;
+  margin-bottom: 60px;
+}
+.main .service .service-detail .service-detail-section .service-detail-list {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 0;
+  flex-shrink: 0;
+  max-width: 650px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main .service .service-detail .service-detail-section .service-detail-list > li {
+  margin-bottom: 40px;
+  flex: 0 0 50%;
+}
+.main .service .service-detail .service-detail-section .service-detail-list > li h1 {
+  position: relative;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+}
+.main .service .service-detail .service-detail-section .service-detail-list > li h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+  width: 90px;
+  height: 2px;
+  background-color: #000;
+}
+.main .service .service-detail .service-detail-section .service-detail-list > li p {
+  font-weight: 300;
+}
+.main .service .service-detail .service-detail-image {
+  max-width: 440px;
+  margin-right: 100px;
+}
+.main .service .service-more {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.main .service .service-more img {
+  max-width: 500px;
+}
+.main .service .service-more .service-more-section {
+  max-width: 500px;
+  text-align: center;
+}
+.main .service .service-more .service-more-section h1 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+.main .service .service-more .service-more-section p {
+  line-height: 30px;
+  font-weight: 300;
+}/*# sourceMappingURL=style.css.map */
